@@ -13,6 +13,7 @@
 		B16A31A31B2C5BBC007F4722 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16A31A21B2C5BBC007F4722 /* Images.xcassets */; };
 		B16A31A61B2C5BBC007F4722 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16A31A41B2C5BBC007F4722 /* LaunchScreen.xib */; };
 		B16A31B21B2C5BBC007F4722 /* JamSlamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A31B11B2C5BBC007F4722 /* JamSlamTests.swift */; };
+		B16A31BC1B2C61A6007F4722 /* html in Resources */ = {isa = PBXBuildFile; fileRef = B16A31BB1B2C61A6007F4722 /* html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B16A31AB1B2C5BBC007F4722 /* JamSlamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamSlamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16A31B01B2C5BBC007F4722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16A31B11B2C5BBC007F4722 /* JamSlamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamSlamTests.swift; sourceTree = "<group>"; };
+		B16A31BB1B2C61A6007F4722 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		B16A31981B2C5BBC007F4722 /* JamSlam */ = {
 			isa = PBXGroup;
 			children = (
+				B16A31BB1B2C61A6007F4722 /* html */,
 				B16A319B1B2C5BBC007F4722 /* AppDelegate.swift */,
 				B16A319D1B2C5BBC007F4722 /* ViewController.swift */,
 				B16A319F1B2C5BBC007F4722 /* Main.storyboard */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16A31A11B2C5BBC007F4722 /* Main.storyboard in Resources */,
+				B16A31BC1B2C61A6007F4722 /* html in Resources */,
 				B16A31A61B2C5BBC007F4722 /* LaunchScreen.xib in Resources */,
 				B16A31A31B2C5BBC007F4722 /* Images.xcassets in Resources */,
 			);
@@ -411,6 +415,7 @@
 				B16A31B71B2C5BBC007F4722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B16A31B81B2C5BBC007F4722 /* Build configuration list for PBXNativeTarget "JamSlamTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				B16A31BA1B2C5BBC007F4722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
