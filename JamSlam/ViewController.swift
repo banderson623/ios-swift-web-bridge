@@ -19,10 +19,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
   func doJS(js: String) -> String{
     var result = "";
     if(isLoaded){
-      println("Executing javascript: \(js)")
+      print("Executing javascript: \(js)")
       result = webView.stringByEvaluatingJavaScriptFromString(js)!
     } else {
-      println("Trying to run JS before it is loaded \(js)")
+      print("Trying to run JS before it is loaded \(js)")
     }
     return result
   }
@@ -39,13 +39,16 @@ class ViewController: UIViewController, UIWebViewDelegate {
       let urlString = request.URL?.absoluteString
 
       // If the string starts with 'ios:' then we know it is a call to a function here
-      if (urlString!.substringToIndex(advance(urlString!.startIndex,4)) == "ios:") {
-        let functionName = urlString!.substringFromIndex(advance(urlString!.startIndex,4))
-        println("got an ios function call: \(functionName)")
+      if (urlString!.substringToIndex(urlString!.startIndex.advancedBy(4)) == "ios:") {
+
+//        let functionName = urlString!.substringFromIndex(advance(urlString!.startIndex,4))
+        let functionName = urlString!.substringFromIndex(urlString!.startIndex.advancedBy(4))
+
+        print("got an ios function call: \(functionName)")
 
         switch functionName {
         case "helloWorld":helloWorld()
-        default : println("UNHANDLED \(functionName)")
+        default : print("UNHANDLED \(functionName)")
         }
 
         // we do not want to actually leave the page when this is triggered
@@ -59,10 +62,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
   // Callback when the webpage is finished loading
   func webViewDidFinishLoad(web: UIWebView){
     isLoaded = true
-    println("Loading done!")
+    print("Loading done!")
 
     let htmlTitle = doJS("document.title");
-    println("Page title: " + htmlTitle)
+    print("Page title: " + htmlTitle)
   }
 
   func loadPage(){
@@ -85,7 +88,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
   }
 
   func helloWorld() {
-    println("Hello World from swift!")
+    print("Hello World from swift!")
   }
 
 
